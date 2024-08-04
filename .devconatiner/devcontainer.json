@@ -1,0 +1,19 @@
+{
+  "name": "Node.js & TypeScript",
+  "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:0-14",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode"
+  ],
+  "postCreateCommand": "npm install",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "React App",
+      "onAutoForward": "openPreview"
+    }
+  }
+}
