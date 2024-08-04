@@ -1,9 +1,10 @@
 import React from 'react';
+import ImageGallery from './ImageGallery';
 
 const App: React.FC = () => {
   return (
     <div>
-      {/* Add your components and logic here */}
+      <ImageGallery />
     </div>
   );
 };
