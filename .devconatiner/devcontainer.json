@@ -3,7 +3,8 @@
   "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:0-20",
   "customizations": {
     "settings": {
-      "terminal.integrated.shell.linux": "/bin/bash"
+      "terminal.integrated.shell.linux": "/bin/bash",
+      "github.copilot.enable": true
     },
     "extensions": [
       "dbaeumer.vscode-eslint",
