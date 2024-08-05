@@ -24,9 +24,8 @@
   "postCreateCommand": "npm install",
   "forwardPorts": [3000],
   "portsAttributes": {
-    "3000": {
-      "label": "React App",
-      "onAutoForward": "openPreview"
-    }
+  "3000": {
+    "label": "React App",
+    "onAutoForward": "openPreview"
   }
 }
