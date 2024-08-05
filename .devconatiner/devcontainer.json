@@ -3,9 +3,17 @@
   "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:0-20",
   "customizations": {
     "vscode": {
+      "settings": {
+				"editor.renderWhitespace": "boundary",
+				"errorLens.gutterIconsEnabled": true,
+				"errorLens.addAnnotationTextPrefixes": false,
+				"errorLens.enabledDiagnosticLevels": ["error", "warning"]
+      },
       "extensions": [
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
+        "bierner.markdown-preview-github-styles",
+				"GitHub.copilot-chat",
         "GitHub.copilot"
       ]
     }
