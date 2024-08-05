@@ -1,31 +1,36 @@
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
-  "name": "Node.js & TypeScript",
-  "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:0-14",
-  "features": {
+	"name": "Python 3",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
 		"ghcr.io/devcontainers/features/github-cli:1": {}
 	},
-  "customizations": {
-    "vscode": {
-      "settings": {
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {
+				"editor.rulers": [80],
 				"editor.renderWhitespace": "boundary",
 				"errorLens.gutterIconsEnabled": true,
 				"errorLens.addAnnotationTextPrefixes": false,
-				"errorLens.enabledDiagnosticLevels": ["error", "warning"]
-      },
-      "extensions": [
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
-        "bierner.markdown-preview-github-styles",
+				"errorLens.enabledDiagnosticLevels": ["error", "warning"],
+			        "editor.wordWrap": "bounded",
+				"editor.wordWrapColumn": 9999
+			},
+			"extensions": [
+				"streetsidesoftware.code-spell-checker",
+				"bierner.markdown-preview-github-styles",
 				"GitHub.copilot-chat",
-        "GitHub.copilot"
-      ]
-    }
-  },
-  "postCreateCommand": "npm install",
-  "forwardPorts": [3000],
-  "portsAttributes": {
-  "3000": {
-    "label": "React App",
-    "onAutoForward": "openPreview"
-  }
+				"GitHub.copilot"
+			]
+		}
+	},
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "pip3 install -r requirements.txt"
+
 }
