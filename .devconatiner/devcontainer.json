@@ -3,14 +3,18 @@
   "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:0-20",
   "customizations": {
     "settings": {
-      "terminal.integrated.shell.linux": "/bin/bash",
-      "github.copilot.enable": true
+      "terminal.integrated.shell.linux": "/usr/bin/zsh"
     },
-    "extensions": [
-      "dbaeumer.vscode-eslint",
-      "esbenp.prettier-vscode",
-      "GitHub.copilot"
-    ]
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "GitHub.copilot"
+      ],
+      "settings": {
+        "github.copilot.enable": true
+      }
+    }
   },
   "postCreateCommand": "npm install",
   "forwardPorts": [3000],
