@@ -10,7 +10,8 @@ my-react-app
 │   └── index.html
 ├── src
 │   ├── components
-│   │   └── App.tsx
+│   │   �   └── App.tsx
+│   │   └── Contact.tsx
 │   ├── index.tsx
 │   ├── react-app-env.d.ts
 │   └── types
@@ -25,6 +26,8 @@ my-react-app
 - `public/index.html`: This file is the HTML template for the React application. It includes a div element with an id of "root" where the React components will be rendered.
 
 - `src/components/App.tsx`: This file exports a functional component `App` which serves as the root component of the application. It can be customized to include other components and logic.
+
+- `src/components/Contact.tsx`: This file exports a functional component `Contact` which includes a form to contact us. It contains input fields for name, email, and message, and a submit button.
 
 - `src/index.tsx`: This file is the entry point of the React application. It renders the `App` component into the DOM element with the id "root".
 
