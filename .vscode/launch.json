@@ -22,18 +22,20 @@
         ],
       },
       {
-        "name": "Debug React App in Default Browser",
-        "type": "pwa-browser",
+        "name": "Debug React App in Chrome",
+        "type": "pwa-chrome",
         "request": "launch",
         "url": "http://localhost:3000", // Adjust the URL to match your dev server URL
-        "webRoot": "${workspaceFolder}/src"
+        "webRoot": "${workspaceFolder}/src",
+        "preLaunchTask": "Launch React App"
       },
       {
         "name": "Debug React App in Firefox",
         "type": "firefox",
         "request": "launch",
         "url": "http://localhost:3000", // Adjust the URL to match your dev server URL
-        "webRoot": "${workspaceFolder}/src"
+        "webRoot": "${workspaceFolder}/src",
+        "preLaunchTask": "Launch React App"
       }
     ]
   }
