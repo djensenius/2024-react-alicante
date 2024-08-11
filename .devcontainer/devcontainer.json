@@ -18,7 +18,9 @@
         "esbenp.prettier-vscode",
         "bierner.markdown-preview-github-styles",
 				"GitHub.copilot-chat",
-        "GitHub.copilot"
+        "GitHub.copilot",
+        "ms-vscode.js-debug-nightly",
+        "firefox-devtools.vscode-firefox-debug"
       ]
     }
   },
