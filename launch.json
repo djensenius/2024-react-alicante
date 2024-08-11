@@ -1,26 +1,32 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-      {
-        "name": "Launch React App",
-        "type": "node",
-        "request": "launch",
-        "program": "${workspaceFolder}/node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-        "args": [
-          "--config",
-          "${workspaceFolder}/webpack.config.js"
-        ],
-        "cwd": "${workspaceFolder}",
-        "protocol": "inspector",
-        "runtimeArgs": [
-          "--inspect"
-        ],
-        "console": "integratedTerminal",
-        "internalConsoleOptions": "neverOpen",
-        "outFiles": [
-          "${workspaceFolder}/dist/**/*.js"
-        ],
-        "preLaunchTask": "openBrowser"
-      }
-    ]
-  }
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch React App",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+      "args": [
+        "--config",
+        "${workspaceFolder}/webpack.config.js"
+      ],
+      "cwd": "${workspaceFolder}",
+      "protocol": "inspector",
+      "runtimeArgs": [
+        "--inspect"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js"
+      ],
+      "preLaunchTask": "openBrowser"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Default",
+      "configurations": ["Launch React App"]
+    }
+  ]
+}
