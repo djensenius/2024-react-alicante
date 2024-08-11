@@ -4,7 +4,7 @@
       {
         "label": "openBrowser",
         "type": "shell",
-        "command": "xdg-open http://localhost:8080",
+        "command": "open http://localhost:3000", // Use "xdg-open" for linux or "start" for Windows
         "problemMatcher": []
       }
     ]

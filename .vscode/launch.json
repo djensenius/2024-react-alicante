@@ -1,0 +1,40 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Launch React App",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder}/node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+        "args": [
+          "--config",
+          "${workspaceFolder}/webpack.config.js"
+        ],
+        "cwd": "${workspaceFolder}",
+        "protocol": "inspector",
+        "runtimeArgs": [
+          "--inspect"
+        ],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "outFiles": [
+          "${workspaceFolder}/dist/**/*.js"
+        ],
+        "preLaunchTask": "openBrowser"
+      },
+      {
+        "name": "Debug React App in Default Browser",
+        "type": "pwa-browser",
+        "request": "launch",
+        "url": "http://localhost:3000", // Adjust the URL to match your dev server URL
+        "webRoot": "${workspaceFolder}/src"
+      },
+      {
+        "name": "Debug React App in Firefox",
+        "type": "firefox",
+        "request": "launch",
+        "url": "http://localhost:3000", // Adjust the URL to match your dev server URL
+        "webRoot": "${workspaceFolder}/src"
+      }
+    ]
+  }
