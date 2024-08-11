@@ -1,19 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import App from './components/App';
 import ImageGallery from './components/ImageGallery';
 import Contact from './components/Contact';
 import About from './components/About';
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container!); // createRoot(container!) if you use TypeScript
+
+root.render(
   <React.StrictMode>
     <Router>
-      <Route path="/" exact component={ImageGallery} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/about" component={About} />
-      <App />
+      <Routes>
+        <Route path="/" element={<ImageGallery />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<App />} />
+      </Routes>
     </Router>
   </React.StrictMode>,
-  document.getElementById('root')
 );
