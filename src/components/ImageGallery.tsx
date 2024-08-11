@@ -5,18 +5,18 @@ const ImageGallery: React.FC = () => {
     {
       src: 'https://via.placeholder.com/150',
       title: 'Image 1',
-      description: 'Description for Image 1'
+      description: 'Description for Image 1',
     },
     {
       src: 'https://via.placeholder.com/150',
       title: 'Image 2',
-      description: 'Description for Image 2'
+      description: 'Description for Image 2',
     },
     {
       src: 'https://via.placeholder.com/150',
       title: 'Image 3',
-      description: 'Description for Image 3'
-    }
+      description: 'Description for Image 3',
+    },
   ];
 
   return (
