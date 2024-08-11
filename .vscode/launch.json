@@ -20,7 +20,6 @@
         "outFiles": [
           "${workspaceFolder}/dist/**/*.js"
         ],
-        "preLaunchTask": "openBrowser"
       },
       {
         "name": "Debug React App in Default Browser",
