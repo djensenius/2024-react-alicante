@@ -10,7 +10,8 @@
 				"editor.renderWhitespace": "boundary",
 				"errorLens.gutterIconsEnabled": true,
 				"errorLens.addAnnotationTextPrefixes": false,
-				"errorLens.enabledDiagnosticLevels": ["error", "warning"]
+				"errorLens.enabledDiagnosticLevels": ["error", "warning"],
+        "eslint.lintTask.enable": true
       },
       "extensions": [
         "dbaeumer.vscode-eslint",

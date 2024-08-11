@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ImageGallery from './ImageGallery';
 import Contact from './Contact';
 import About from './About';
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <Router>
       <div>
@@ -21,9 +21,11 @@ const App: React.FC = () => {
             </li>
           </ul>
         </nav>
-        <Route path="/" exact component={ImageGallery} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/about" component={About} />
+        <Routes>
+          <Route path="/" element={<ImageGallery />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
       </div>
     </Router>
   );
