@@ -2,10 +2,10 @@
 
 ## Prerequisite
 
-- Install extensions [Wave](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh), [HeadingsMap](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) and [Axe](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
+- Install extensions [Wave](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) ([Firefox](https://addons.mozilla.org/en-CA/firefox/addon/wave-accessibility-tool/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)), [HeadingsMap](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) ([Firefox](https://addons.mozilla.org/en-CA/firefox/addon/headingsmap/)) and [Axe](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd) ([Firefox](https://addons.mozilla.org/en-CA/firefox/addon/axe-devtools/))
 - Optional extensions and tools:
-- - [Accessibility checker extension](https://chromewebstore.google.com/detail/ibm-equal-access-accessib/lkcagbfjnkomcinoddgooolagloogehp?pli=1)
-- - [VisBug extension](https://chromewebstore.google.com/detail/ibm-equal-access-accessib/lkcagbfjnkomcinoddgooolagloogehp?pli=1)
+- - [Accessibility checker extension](https://chromewebstore.google.com/detail/ibm-equal-access-accessib/lkcagbfjnkomcinoddgooolagloogehp?pli=1) ([Firefox](https://addons.mozilla.org/en-CA/firefox/addon/accessibility-checker/))
+- - [VisBug extension](https://chromewebstore.google.com/detail/ibm-equal-access-accessib/lkcagbfjnkomcinoddgooolagloogehp?pli=1) ([Firefox](https://addons.mozilla.org/en-CA/firefox/addon/visbug/))
 - Participants should bring their laptops with access to GitHub (each participant will get an invitation to an organization or a coupon for complimentary Copilot access).
 - Basic accessibility knowledge (not mandatory)
 - [Visual Studio Code](https://code.visualstudio.com/)
