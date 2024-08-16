@@ -1,4 +1,20 @@
-# My React App
+# 2024 React Workshop
+
+## Prerequisite
+
+- Install extensions [Wave](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh), [HeadingsMap](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) and [Axe](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
+- Optional extensions and tools:
+- - [Accessibility checker extension](https://chromewebstore.google.com/detail/ibm-equal-access-accessib/lkcagbfjnkomcinoddgooolagloogehp?pli=1)
+- - [VisBug extension](https://chromewebstore.google.com/detail/ibm-equal-access-accessib/lkcagbfjnkomcinoddgooolagloogehp?pli=1)
+- Participants should bring their laptops with access to GitHub (each participant will get an invitation to an organization or a coupon for complimentary Copilot access).
+- Basic accessibility knowledge (not mandatory)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- Basic knowledge of React 
+- Sample code snippets and exercises will be provided by the workshop facilitators.
+- Snacks and water
+
+
+# Samle app
 
 This is a basic React application created using TypeScript.
 
