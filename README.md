@@ -339,7 +339,7 @@ Things to keep in mind for mobile experience
 
 ## Good news
 
-Accessibility can never be perfect, but by thinking inclusively from planning, through prototyping to coding, you can reduce the time you spend on coding to minutes. It's never been easier before. [This guide is awesome if you want to continue learning](https://www.accessibility-developer-guide.com/introduction/).
+Accessibility can never be perfect, but by thinking inclusively from planning, through prototyping to coding, you can reduce the time you spend on coding to minutes. It's never been easier before. [This guide is awesome if you want to continue learning](https://www.accessibility-developer-guide.com/introduction/), or [you can ask Copilot](https://github.blog/developer-skills/github/prompting-github-copilot-chat-to-become-your-personal-ai-assistant-for-accessibility/) to be your personal a11y assistant.
 
 And remember:
 
