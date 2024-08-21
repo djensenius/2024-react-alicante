@@ -40,6 +40,7 @@ There is a wide range of disabilities, but accessibility aims to make sure that 
 Optional extensions and tools:
 - [ ] [Accessibility checker](https://chromewebstore.google.com/detail/ibm-equal-access-accessib/lkcagbfjnkomcinoddgooolagloogehp)
 - [ ] [VisBug extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc?hl=en) 
+- [ ] [taba11y extension](https://chromewebstore.google.com/detail/taba11y/aocppmckdocdjkphmofnklcjhdidgmga?pli=1)
 - [ ] Participants should bring their laptops with access to [GitHub](https://github.com/) (each participant will get an invitation to an organization or a coupon for complimentary Copilot access).
 - [ ] Basic accessibility knowledge (not mandatory). 
 - [ ] [VS Code](https://code.visualstudio.com/download)
