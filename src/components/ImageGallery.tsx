@@ -10,7 +10,7 @@ const ImageGallery: React.FC = () => {
     {
       src: image1,
       title: 'Image 1',
-      description: 'Description for Image 1',
+      description: 'This is cute doc #1',
     },
     {
       src: image2,
