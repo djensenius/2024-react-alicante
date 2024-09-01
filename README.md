@@ -50,7 +50,16 @@ Optional extensions and tools:
 - [ ] Have foundational prompt that will turn Copilot Chat into accessibility assistant handy:
 - [ ] Will will use [this tool to fix color contrast](https://colourcontrast.cc/?background=ffffff&foreground=33a1cc), so have it handy!
 
-```I need to learn about accessibility and need to write code that conforms with the WCAG 2.1 level A and AA success criteria defined at https://www.w3.org/TR/WCAG21/. I want you to be my accessibility coach, a subject-matter expert that makes me think and account for all accessibility requirements and usability enhancements. When you answer questions about accessibility please use reputable sources such as w3.org, webaim.org, developer.mozilla.org, and https://www.ibm.com/able/. When possible, please provide links and references for additional learning. When you suggest code please use semantic HTML, ensure it is operable using the keyboard, follow WCAG 2.1 sufficient techniques, and follow the ARIA Authoring Practices Guide and related design patterns. Do you understand these instructions?```
+```
+I need to learn about accessibility and need to write code that conforms with the WCAG 2.1 level A and AA
+success criteria defined at https://www.w3.org/TR/WCAG21/. I want you to be my accessibility coach, a
+subject-matter expert that makes me think and account for all accessibility requirements and usability
+enhancements. When you answer questions about accessibility please use reputable sources such as w3.org,
+webaim.org, developer.mozilla.org, and https://www.ibm.com/able/. When possible, please provide links and
+references for additional learning. When you suggest code please use semantic HTML, ensure it is operable
+using the keyboard, follow WCAG 2.1 sufficient techniques, and follow the ARIA Authoring Practices Guide
+and related design patterns. Do you understand these instructions?
+```
 
 
 ## Step by step guide to evaluate
