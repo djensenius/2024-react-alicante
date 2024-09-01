@@ -23,7 +23,7 @@ There is a wide range of disabilities, but accessibility aims to make sure that 
 
 - Usage without vision
 - Usage with limited vision
-- Usage without perception of color
+- Usage without perception of colour
 - Usage without hearing
 - Usage with limited hearing
 - Usage without the vocal capability
@@ -48,8 +48,19 @@ Optional extensions and tools:
 - [ ] Learn a little bit about [Storybook](https://storybook.js.org/), we will use it. 
 - [ ] If you’re interested in automated tests, you can even [integrate axe with Cypress](https://github.com/component-driven/cypress-axe)
 - [ ] Have foundational prompt that will turn Copilot Chat into accessibility assistant handy:
-     ```I need to learn about accessibility and need to write code that conforms with the WCAG 2.1 level A and AA success criteria defined at https://www.w3.org/TR/WCAG21/. I want you to be my accessibility coach, a subject-matter expert that makes me think and account for all accessibility requirements and usability enhancements. When you answer questions about accessibility please use reputable sources such as w3.org, webaim.org, developer.mozilla.org, and https://www.ibm.com/able/. When possible, please provide links and references for additional learning. When you suggest code please use semantic HTML, ensure it is operable using the keyboard, follow WCAG 2.1 sufficient techniques, and follow the ARIA Authoring Practices Guide and related design patterns. Do you understand these instructions?```
 - [ ] Will will use [this tool to fix color contrast](https://colourcontrast.cc/?background=ffffff&foreground=33a1cc), so have it handy!
+
+```
+I need to learn about accessibility and need to write code that conforms with the WCAG 2.1 level A and AA
+success criteria defined at https://www.w3.org/TR/WCAG21/. I want you to be my accessibility coach, a
+subject-matter expert that makes me think and account for all accessibility requirements and usability
+enhancements. When you answer questions about accessibility please use reputable sources such as w3.org,
+webaim.org, developer.mozilla.org, and https://www.ibm.com/able/. When possible, please provide links and
+references for additional learning. When you suggest code please use semantic HTML, ensure it is operable
+using the keyboard, follow WCAG 2.1 sufficient techniques, and follow the ARIA Authoring Practices Guide
+and related design patterns. Do you understand these instructions?
+```
+
 
 ## Step by step guide to evaluate
 
@@ -148,11 +159,14 @@ Can a person navigating with a keyboard or screen reader move around the page in
 <summary>Hint</summary>
   `alt` attributes (alternative text) give a description of an image for people who may not be able to view it. When an `alt` attribute isn't present on an image, a screen reader may announce the image's file name and path instead. This fails to communicate the image’s content.
 </details>    
+
 - [ ]  Make sure that decorative images use **null** `alt` (empty) attribute values.
+
 <details>
 <summary>Hint</summary>
     Null alt attributes are also sometimes known as empty alt attributes. They are made by including no information between the opening and closing quotes of an alt attribute. Decorative images do not communicate information that is required to understand the website's overall meaning. 
 </details>    
+
 - [ ]  Provide a text alternative for complex images such as charts, graphs, and maps ([non-text content](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html))
 
 <details>
@@ -165,16 +179,21 @@ Can a person navigating with a keyboard or screen reader move around the page in
 Heading elements (`h1`, `h2`, `h3`, etc.) help break up the content of the page into related “chunks” of information. They are incredibly important for helping people who use assistive technology to understand the meaning of a page or view.
 
 - [ ]  Use heading elements to introduce content ([heading or labels](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html))
+
 <details>
 <summary>Hint</summary>
   Heading elements construct a document outline, and should not be used for purely visual design.
 </details>       
+
 - [ ]  Try to use only one `h1` element per page or view ([heading or labels](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html))
+
 <details>
 <summary>Hint</summary>
   The `h1` element should be used to communicate the high-level purpose of the page or view.
 </details>        
+
 - [ ]  Heading elements should be written in a logical sequence
+
 <details>
 <summary>Hint</summary>
   The order of heading elements should descend, based on the “depth” of the content. For example, `h4` element should not appear on a page before the first `h3` element declaration. A tool such as [headingsMap](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=en) can help you evaluate this.
@@ -185,31 +204,38 @@ Heading elements (`h1`, `h2`, `h3`, etc.) help break up the content of the page 
 Controls are interactive elements such as links and buttons that let a person navigate to a destination or perform an action.
 
 - [ ]  Links should always have a `href` attribute ([info and relationships](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html))
+
 <details>
 <summary>Hint</summary>
   Without a `href` attribute, the link will not be properly exposed to assistive technology. An example of this would be a link that uses an `onClick` event, in place of a href attribute.
 </details> 
+
 - [ ]  Ensure that links are recognizable as links ([use of color](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html))
+
 <details>
 <summary>Hint</summary>
   Color alone is not sufficient to indicate the presence of a link. Underlines are a popular and commonly-understood way to communicate the presence of link content.
 </details> 
+
 - [ ]  Ensure that controls have `:focus` states ([focus visible](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html))
+
 <details>
 <summary>Hint</summary>
 Visible focus styles help people determine which interactive element has keyboard focus. This lets them know that they can perform actions like activating a button or navigating to a link's destination.
 </details> 
     
 - [ ]  Use the `button` element for buttons ([info and relationships](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html))
+
 <details>
 <summary>Hint</summary>
     Buttons are used to submit data or perform an on-screen action that does not shift keyboard focus. You can add `type="button"` to a button element to prevent the browser from attempting to submit form information when activated.
 </details> 
     
 - [ ]  Provide a skip link and make sure that it is visible when focused ([bypass blocks](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html))
+
 <details>
 <summary>Hint</summary>
-     ```html
+```html
     <a href="#main">Skip to main content</a>
       <nav role="navigation">
         <ul>
@@ -221,11 +247,12 @@ Visible focus styles help people determine which interactive element has keyboar
       <main id="main">
         <!-- page specific content -->
       </main>
-    ```
+```
     A skip link can be used to provide quick access to the main content of a page or view. This allows a person to easily bypass globally repeated content such as a website's primary navigation, or persistent search widget.
 </details> 
     
 - [ ]  Identify links that open in a new tab or window ([giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html))
+
 <details>
 <summary>Hint</summary>
      Ideally, avoid links that open in a new tab or window. If a link does, ensure the link's behavior will be communicated in a way that is apparent to all users. Doing this will help people understand what will happen before activating the link. While this technique is technically not required for compliance, it is an often-cited area of frustration for many different kinds of assistive technology users.
@@ -236,29 +263,35 @@ Visible focus styles help people determine which interactive element has keyboar
 Forms allow people to enter information into a site for processing and manipulation.
 
 - [ ]  All inputs in a form are associated with a corresponding `label` element ([on input understanding](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-unpredictable-change.html))
+
 <details>
 <summary>Hint</summary>
      Use a `for`/`id` pairing to guarantee the highest level of browser/assistive technology support.
 </details> 
     
 - [ ]  Use fieldset and legend elements where appropriate ([info and relationships](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html))
+
 <details>
 <summary>Hint</summary>
      Does your form contain multiple sections of related inputs? Use `fieldset` to group them, and `legend` to provide a label for what this section is for.
 </details>     
+
 - [ ]  Inputs use `autocomplete` where appropriate ([identify input purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html))
+
 <details>
 <summary>Hint</summary>
    [Providing a mechanism](https://www.w3.org/TR/html52/sec-forms.html#sec-autofill) to help people more quickly, easily, and accurately fill in form fields that ask for common information (for example, name, address, phone number)
 </details>  
     
 - [ ]  Make sure that form input errors are displayed in the list above the form after submission ([error identification](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html))
+
 <details>
 <summary>Hint</summary>
     This provides a way for assistive technology users to quickly have a high-level understanding of what issues are present in the form. This is especially important for larger forms with many inputs. Make sure that each reported error also has a link to the corresponding field with invalid input.
 </details>  
     
 - [ ]  Associate input error messaging with the input it corresponds to ([error identification](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html))
+
 <details>
 <summary>Hint</summary>
 Techniques such as [using aria-describedby](https://developer.paciellogroup.com/blog/2018/09/describing-aria-describedby/) allow people who use assistive technology to more easily understand the difference between the input and the error message associated with it.
@@ -270,12 +303,14 @@ Techniques such as [using aria-describedby](https://developer.paciellogroup.com/
 Media includes content such as pre-recorded and live audio and video.
 
 - [ ]  Make sure that media does not autoplay ([audio control](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-dis-audio.html))
+
 <details>
 <summary>Hint</summary>
 Unexpected video and audio can be distracting and disruptive, especially for certain kinds of cognitive disability such as ADHD.
 </details>  
     
 - [ ]  Check to see that all media can be paused ([keyboard](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-keyboard-operable.html))
+
 <details>
 <summary>Hint</summary>
     Provide a global pause function on any media element. If the device has a keyboard, ensure that pressing the `Space key` can pause playback. Make sure you also don't interfere with the `Space key`'s ability to scroll the page/view when not focusing on a form control.
@@ -286,17 +321,21 @@ Unexpected video and audio can be distracting and disruptive, especially for cer
 Content that moves, either on its own, or when triggered by a person activating a control
 
 - [ ]  Ensure animations are subtle and do not flash too much ([three flashes or below threshold](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html))
+
 <details>
 <summary>Hint</summary>
     Certain kinds of strobing or flashing animations will trigger seizures. Others may be distracting and disruptive, especially for certain kinds of cognitive disability such as ADHD.
 </details>      
+
 - [ ]  Provide a mechanism to pause background video ([pause, stop, hide](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html))
+
 <details>
 <summary>Hint</summary>
        Background video can be distracting, especially if the content is placed over it.
 </details>     
     
 - [ ]  Make sure all animation obeys the `prefers-reduced-motion` media query ([animation from interactions](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html))
+
 <details>
 <summary>Hint</summary>
     Remove animations when the “reduce motion” setting is activated. If animation is necessary to communicate meaning for a concept, slow its duration down.
@@ -309,34 +348,37 @@ Color contrast is how legible colors are when placed next to, and on top of each
 - [ ]  Level AA compliance requires a contrast ratio of 4.5:1 for normal-sized text, icons, borders for inputs, radio buttons, checkboxes, etc ([contrast](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html))
 - [ ]  Provide a mechanism to pause background video ([pause, stop, hide](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html))
 - [ ]  Check custom `::selection` colors
+
 <details>
 <summary>Hint</summary>
         Is the color contrast you set in [your `::selection` CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/::selection) declaration sufficient? Otherwise, someone may not be able to read it if they highlight it.
 </details>  
     
-
 ### Mobile / Touch
 
 Things to keep in mind for mobile experience
 
 - [ ]  Check that the site can be rotated to any orientation ([orientation](https://www.w3.org/WAI/WCAG21/Understanding/orientation.html))
 - [ ]  Remove horizontal scrolling ([reflow](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html))
+
 <details>
 <summary>Hint</summary>
        Requiring someone to scroll horizontally can be difficult for some, irritating for all
 </details>  
+
 - [ ]  Ensure that button and link icons can be activated with ease ([target size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html))
+
 <details>
 <summary>Hint</summary>
         It's good to make sure things like hamburger menus, social icons, gallery viewers, and other touch controls are usable by a wide range of hand and stylus sizes.
 </details> 
    
 - [ ]  Ensure sufficient space between interactive items in order to provide a scroll area ([Bypass blocks](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html))
+
 <details>
 <summary>Hint</summary>
         Some people who experience motor control issues such as hand tremors may have a very difficult time scrolling past interactive items that feature zero spacing.
 </details> 
-
 
 ## Good news
 
