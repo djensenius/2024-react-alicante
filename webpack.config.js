@@ -42,6 +42,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'), // Updated from contentBase
     },
+    historyApiFallback: true,
     compress: true,
     port: 3000,
     hot: true,
