@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-modal';
 import image1 from '../images/IMG_3137.jpg';
 import image2 from '../images/IMG_3538.jpg';
@@ -52,7 +52,7 @@ const ImageGallery: React.FC = () => {
       </div>
       <div className="grid gap-4 grid-cols-2">
         {images.map((image, index) => (
-          <div key={index}  onClick={() => openModal(image.src)}>
+          <div key={index} onClick={() => openModal(image.src)}>
             <img src={image.src} className="rounded-lg md:w-56" />
             <h3>{image.title}</h3>
             <p>{image.description}</p>
@@ -81,10 +81,30 @@ const ImageGallery: React.FC = () => {
           },
         }}
       >
-        <button onClick={closeModal} style={{ position: 'absolute', top: '10px', right: '10px' }}>Close</button>
+        <button
+          onClick={closeModal}
+          style={{ position: 'absolute', top: '10px', right: '10px' }}
+        >
+          Close
+        </button>
         {selectedImage && (
-          <div style={{ width: '90%', height: '90%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <img src={selectedImage} style={{ maxWidth: '90%', maxHeight: '90%', objectFit: 'contain' }} />
+          <div
+            style={{
+              width: '90%',
+              height: '90%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <img
+              src={selectedImage}
+              style={{
+                maxWidth: '90%',
+                maxHeight: '90%',
+                objectFit: 'contain',
+              }}
+            />
           </div>
         )}
       </Modal>
