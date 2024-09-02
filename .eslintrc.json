@@ -28,5 +28,6 @@
   "env": {
     "browser": true,
     "node": true
-  }
+  },
+  "ignorePatterns": ["src/stories"]
 }
