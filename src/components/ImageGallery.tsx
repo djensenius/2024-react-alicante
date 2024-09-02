@@ -10,39 +10,52 @@ Modal.setAppElement('#root'); // Set the root element for accessibility
 
 const ImageGallery: React.FC = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedItem, setSelectedItem] = useState<string | null>(null);
+  const [isVideo, setIsVideo] = useState(false);
 
-  const images = [
+  const items = [
+    {
+      src: 'https://www.youtube.com/embed/zk0PeLn7PjM?autoplay=1',
+      title: 'Video 1',
+      description: 'Description for Video 1',
+      isVideo: true,
+    },
     {
       src: image1,
       title: 'Image 1',
       description: 'Description for Image 1',
+      isVideo: false,
     },
     {
       src: image2,
       title: 'Image 2',
       description: 'Description for Image 2',
+      isVideo: false,
     },
     {
       src: image3,
       title: 'Image 3',
       description: 'Description for Image 3',
+      isVideo: false,
     },
     {
       src: image4,
       title: 'Image 4',
       description: 'Description for Image 4',
+      isVideo: false,
     },
   ];
 
-  const openModal = (imageSrc: string) => {
-    setSelectedImage(imageSrc);
+  const openModal = (itemSrc: string, isVideo: boolean) => {
+    setSelectedItem(itemSrc);
+    setIsVideo(isVideo);
     setModalIsOpen(true);
   };
 
   const closeModal = () => {
     setModalIsOpen(false);
-    setSelectedImage(null);
+    setSelectedItem(null);
+    setIsVideo(false);
   };
 
   return (
@@ -51,11 +64,25 @@ const ImageGallery: React.FC = () => {
         <h1 className="text-3xl font-bold underline">Image Gallery</h1>
       </div>
       <div className="grid gap-4 grid-cols-2">
-        {images.map((image, index) => (
-          <div key={index} onClick={() => openModal(image.src)}>
-            <img src={image.src} className="rounded-lg md:w-56" />
-            <h3>{image.title}</h3>
-            <p>{image.description}</p>
+        {items.map((item, index) => (
+          <div key={index} onClick={() => openModal(item.src, item.isVideo)}>
+            {item.isVideo ? (
+              <div className="rounded-lg md:w-56">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={item.src}
+                  title={item.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            ) : (
+              <img src={item.src} className="rounded-lg md:w-56" />
+            )}
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
           </div>
         ))}
       </div>
@@ -87,24 +114,36 @@ const ImageGallery: React.FC = () => {
         >
           Close
         </button>
-        {selectedImage && (
+        {selectedItem && (
           <div
             style={{
-              width: '90%',
-              height: '90%',
+              width: '100%',
+              height: '100%',
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
             }}
           >
-            <img
-              src={selectedImage}
-              style={{
-                maxWidth: '90%',
-                maxHeight: '90%',
-                objectFit: 'contain',
-              }}
-            />
+            {isVideo ? (
+              <iframe
+                width="100%"
+                height="100%"
+                src={selectedItem}
+                title="Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            ) : (
+              <img
+                src={selectedItem}
+                style={{
+                  maxWidth: '80%',
+                  maxHeight: '80%',
+                  objectFit: 'contain',
+                }}
+              />
+            )}
           </div>
         )}
       </Modal>
