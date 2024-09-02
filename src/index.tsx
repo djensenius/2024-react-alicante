@@ -6,6 +6,7 @@ import ImageGallery from './components/ImageGallery';
 import Contact from './components/Contact';
 import About from './components/About';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const container = document.getElementById('root');
 const root = createRoot(container!); // createRoot(container!) if you use TypeScript
@@ -20,6 +21,7 @@ root.render(
         <Route path="/about" element={<About />} />
         <Route path="*" element={<App />} />
       </Routes>
+      <Footer />
     </Router>
   </React.StrictMode>,
 );

@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
       <h2>Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Name:</label>
+          <span>Name:</span>
           <input
             type="text"
             id="name"
@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
           />
         </div>
         <div>
-          <label htmlFor="email">Email:</label>
+          <span>Email:</span>
           <input
             type="email"
             id="email"
@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
           />
         </div>
         <div>
-          <label htmlFor="message">Message:</label>
+          <span>Message:</span>
           <textarea
             id="message"
             value={message}
