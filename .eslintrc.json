@@ -4,8 +4,16 @@
       "version": "detect"
     }
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended"],
-  "plugins": ["prettier", "@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:storybook/recommended"
+  ],
+  "plugins": [
+    "prettier",
+    "@typescript-eslint"
+  ],
   "rules": {
     "prettier/prettier": "error"
   },
@@ -20,5 +28,6 @@
   "env": {
     "browser": true,
     "node": true
-  }
+  },
+  "ignorePatterns": ["src/stories"]
 }
