@@ -27,7 +27,12 @@
         "request": "launch",
         "url": "http://localhost:3000", // Adjust the URL to match your dev server URL
         "webRoot": "${workspaceFolder}/src",
-        "preLaunchTask": "Launch React App"
+        "preLaunchTask": "Launch React App",
+        "postDebugTask": "Terminate React App",
+        "reloadOnChange": {
+          "watch": "${workspaceFolder}/src",
+          "ignore": ["**/node_modules/**"]
+        }
       },
       {
         "name": "Debug React App in Firefox",
@@ -35,7 +40,12 @@
         "request": "launch",
         "url": "http://localhost:3000", // Adjust the URL to match your dev server URL
         "webRoot": "${workspaceFolder}/src",
-        "preLaunchTask": "Launch React App"
+        "preLaunchTask": "Launch React App",
+        "postDebugTask": "Terminate React App",
+        "reloadOnChange": {
+          "watch": "${workspaceFolder}/src",
+          "ignore": ["**/node_modules/**"]
+        }
       }
     ]
   }
