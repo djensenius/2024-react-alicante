@@ -2,26 +2,6 @@
     "version": "0.2.0",
     "configurations": [
       {
-        "name": "Launch React App",
-        "type": "node",
-        "request": "launch",
-        "program": "${workspaceFolder}/node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-        "args": [
-          "--config",
-          "${workspaceFolder}/webpack.config.js"
-        ],
-        "cwd": "${workspaceFolder}",
-        "protocol": "inspector",
-        "runtimeArgs": [
-          "--inspect"
-        ],
-        "console": "integratedTerminal",
-        "internalConsoleOptions": "neverOpen",
-        "outFiles": [
-          "${workspaceFolder}/dist/**/*.js"
-        ],
-      },
-      {
         "name": "Debug React App in Chrome",
         "type": "pwa-chrome",
         "request": "launch",
@@ -46,6 +26,39 @@
           "watch": "${workspaceFolder}/src",
           "ignore": ["**/node_modules/**"]
         }
+      },
+      {
+        "name": "Launch Storybook",
+        "type": "pwa-chrome",
+        "request": "launch",
+        "url": "http://localhost:6006", // Adjust the URL to match your Storybook server URL
+        "webRoot": "${workspaceFolder}/src",
+        "preLaunchTask": "Launch Storybook",
+        "postDebugTask": "Terminate Storybook",
+        "reloadOnChange": {
+          "watch": "${workspaceFolder}/src",
+          "ignore": ["**/node_modules/**"]
+        }
+      },
+      {
+        "name": "Launch React App",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder}/node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+        "args": [
+          "--config",
+          "${workspaceFolder}/webpack.config.js"
+        ],
+        "cwd": "${workspaceFolder}",
+        "protocol": "inspector",
+        "runtimeArgs": [
+          "--inspect"
+        ],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "outFiles": [
+          "${workspaceFolder}/dist/**/*.js"
+        ],
       }
     ]
   }
