@@ -20,7 +20,10 @@
 				"GitHub.copilot-chat",
         "GitHub.copilot",
         "ms-vscode.js-debug-nightly",
-        "firefox-devtools.vscode-firefox-debug"
+        "firefox-devtools.vscode-firefox-debug",
+        "github.vscode-github-actions",
+        "deque-systems.vscode-axe-linter"
+
       ]
     }
   },
