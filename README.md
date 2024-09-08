@@ -61,8 +61,18 @@ using the keyboard, follow WCAG 2.1 sufficient techniques, and follow the ARIA A
 and related design patterns. Do you understand these instructions?
 ```
 
+### 2. Setup
 
-### 2. Determine the status of the page
+1. Redeem the Copilot code, or feel free to give away your copy after the workshop to someone who would use it
+2. Go to [https://gh.io/ra](https://gh.io/ra)
+2. Click on the code button
+3. Select the Codespaces tab
+4. Click `Create codespace on main`
+5. Visual Studio Code should start up with all packages installed
+6. Select the build and run tab in Visual Studio Code
+7. Run either "Debug React Code in Chrome" or "Debug React Code in Firefox"
+
+### 3. Determine the status of the page
 
 1. Open the website
 2. Check how bad the situation is (easy [automatic checker](https://www.webaccessibility.com/)), [Wave](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) or [Axe](https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd)
