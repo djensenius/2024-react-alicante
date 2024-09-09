@@ -1,6 +1,7 @@
 # Welcome to the workkshop! 
 
-In this workshop, we will dive into the world of code accessibility by leveraging Copilot, GitHub's AI coding assistant. Led by David Jensenius and [Alena Nikolaeva](https://x.com/alenanik11) from GitHub Copilot team, participants will gain practical insights into maximizing code accessibility while building React components.
+In this workshop, we will dive into the world of code accessibility by leveraging Copilot, GitHub's AI coding assistant. 
+Led by David Jensenius and [Alena Nikolaeva](https://x.com/alenanik11) from GitHub Copilot team.
 
 ## Introduction
 
@@ -38,10 +39,11 @@ There is a wide range of disabilities, but accessibility aims to make sure that 
 
 - [ ] Install Chrome extensions like [Wave](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh), [HeadingsMap](https://chromewebstore.google.com/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi) and [Axe](https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd) 
 Optional extensions and tools:
-- [ ] [Accessibility checker](https://chromewebstore.google.com/detail/ibm-equal-access-accessib/lkcagbfjnkomcinoddgooolagloogehp)
-- [ ] [VisBug extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc?hl=en) 
-- [ ] [taba11y extension](https://chromewebstore.google.com/detail/taba11y/aocppmckdocdjkphmofnklcjhdidgmga?pli=1)
-- [ ] Participants should bring their laptops with access to [GitHub](https://github.com/) (each participant will get an invitation to an organization or a coupon for complimentary Copilot access).
+- [ ] Install [Accessibility checker](https://chromewebstore.google.com/detail/ibm-equal-access-accessib/lkcagbfjnkomcinoddgooolagloogehp)
+- [ ] Install [Web developer extension](https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?pli=1)
+- [ ] Install[VisBug extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc?hl=en) 
+- [ ] Install [taba11y extension](https://chromewebstore.google.com/detail/taba11y/aocppmckdocdjkphmofnklcjhdidgmga?pli=1)
+- [ ] Bring the laptop with access to [GitHub](https://github.com/) (each participant will get an invitation to an organization or a coupon for complimentary Copilot access).
 - [ ] Basic accessibility knowledge (not mandatory). 
 - [ ] [VS Code](https://code.visualstudio.com/download)
 - [ ] Basic knowledge of [React](https://react.dev/)
@@ -385,9 +387,9 @@ Color contrast is how legible colors are when placed next to, and on top of each
         Some people who experience motor control issues such as hand tremors may have a very difficult time scrolling past interactive items that feature zero spacing.
 </details> 
 
-## Good news
+## Good news 
 
-Accessibility can never be perfect, but by thinking inclusively from planning, through prototyping to coding, you can reduce the time you spend on coding to minutes. It's never been easier before. [This guide is awesome if you want to continue learning](https://www.accessibility-developer-guide.com/introduction/), or [you can ask Copilot](https://github.blog/developer-skills/github/prompting-github-copilot-chat-to-become-your-personal-ai-assistant-for-accessibility/) to be your personal a11y assistant.
+Accessibility can never be perfect, but by thinking inclusively from planning, through prototyping to coding, you can reduce the time you spend on coding to minutes. It's never been easier before. [This guide is awesome if you want to continue learning](https://www.accessibility-developer-guide.com/introduction/), or [you can ask Copilot](https://github.blog/developer-skills/github/prompting-github-copilot-chat-to-become-your-personal-ai-assistant-for-accessibility/) to be your personal a11y assistant. Also [design principles](https://inclusivedesignprinciples.info/) can be really helpful to collab in the team.
 
 And remember:
 
