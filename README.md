@@ -74,7 +74,7 @@ and related design patterns. Do you understand these instructions?
 6. Select the build and run tab in Visual Studio Code
 7. Run either "Debug React Code in Chrome" or "Debug React Code in Firefox"
 
-### 3. Determine the status of the page
+### 3. Determine accessibility status of the page
 
 1. Open the website
 2. Check how bad the situation is (easy [automatic checker](https://www.webaccessibility.com/)), [Wave](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) or [Axe](https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd)
@@ -103,15 +103,70 @@ Put your mouse away and tab through the page and see if you can use every single
 9. Check images descriptions with [Web developer extension](https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=es) 
 10. Color contrast of elements with [VisBug](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc?hl=en)
 
-### 3. Digging deeper
-
-#### Generic
+### 4. Heads-down fixing!
 
 When it comes to the underlying HTML code, we’re in luck: it has already been designed, from the outset, to be inclusive. HTML is a toolkit for inclusion. Using the right elements for the job doesn’t just mean the few who use screen readers benefit, but keyboard accessibility comes out-of-the-box.
 
-This guide uses [The Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) as a reference point. The WCAG is a shared standard for web content accessibility for individuals, organizations, and governments.
+The guide provided for this workshop uses [The Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) as a reference point. The WCAG is a shared standard for web content accessibility for individuals, organizations, and governments. [Licensed under CC](https://creativecommons.org/licenses/by-sa/4.0/).
 
-The reccomendations targets many, but not all level A and AA concerns and prompts you to check for covers a wide range of disability conditions. Each recommendation contains a link to the WCAG section.
+The reccomendations targets many, but not all level A and AA concerns and prompts you to check for covers a wide range of disability conditions. 
+
+> [!NOTE]  
+> Don't forget to ask Copilot how to fix these in your codebase!
+
+#### 1. Perceivable: can people read the content? 
+
+**Level A**
+- [ ] Text alternatives: images should have descriptive (alt) text. [1.1.1](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content)
+- [ ] Any audio-only content should also be conveyed in text. Any video content with no audio track should also be described in text, but could also be described with audio. ([1.2.1](https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded))
+- [ ] The audio in videos should be captioned. [1.2.2](https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded)
+- [ ] Actions, descriptions, and other important non-audio content in videos should be described in captions or a separate audio track. ([1.2.3](https://www.w3.org/WAI/WCAG22/Understanding/audio-description-or-media-alternative-prerecorded))
+- [ ] Information or relationships between content that is visual is also conveyed through the code, via HTML or ARIA (for example the for attribute on a form label, or aria-describedby on an input that has hint text). [1.3.1](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships)
+- [ ] The visual presentation of the content matches what’s read out by a screen reader. ([1.3.2](https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence))
+- [ ] Nothing is referred to just by its color, size, position, shape, and so on. [1.3.3](https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics)
+- [ ] Color shouldn’t be the only thing used to convey meaning. [1.4.1](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color)
+- [ ] Auto playing audio that lasts more than 3 seconds can be turned down or stopped. [1.4.2](https://www.w3.org/WAI/WCAG22/Understanding/audio-control)
+
+#### 2. Perceivable: can people use the content? 
+- [ ] You can get around using the keyboard alone. [2.1.1](https://www.w3.org/WAI/WCAG22/Understanding/keyboard)
+- [ ] There shouldn’t be a situation where you enter a modal with the keyboard and can’t get back to where you were. ([2.1.2](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap))
+- [ ] Keyboard shortcuts should use modifier keys, like [ctrl], [command], or [alt]/[option], but you can turn them off. [2.1.4](https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts)
+- [ ] Time limits should be avoided unless they’re able to be extended. [2.2.1](https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable)
+- [ ] Automatically moving/animating content that lasts more than 5 seconds should be able to be stopped or hidden. [2.2.2](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide)
+- [ ] Nothing flashes, blinks, or flickers more than three times in one second. [2.3.1](https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold)
+- [ ] ‘Skip links’ are available for keyboard users to jump past navigation. [2.4.1](https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks)
+- [ ] Each page has a unique <title> that describes what’s on that page. [2.4.2](https://www.w3.org/WAI/WCAG22/Understanding/page-titled)
+- [ ] When a keyboard user tabs through a page, the order goes from top to bottom and left to right, as you would read the page. [2.4.3](https://www.w3.org/WAI/WCAG22/Understanding/focus-order)
+- [ ] It is clear where a link will take you from either: the link text itself, the information in the sentence leading up to the link [2.4.4](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context)
+- [ ] All actions that are carried out using a gesture (swiping, pinching, and so on) or drawing, can also be done with a button or buttons. [2.5.1](https://www.w3.org/WAI/WCAG22/Understanding/pointer-gestures)
+- [ ] Actions (like pressing a button) aren’t triggered on mouse-down; rather on mouse-up. [2.5.2](https://www.w3.org/WAI/WCAG22/Understanding/pointer-cancellation)
+- [ ] The visible text of a form field, button, or link matches the text in the underlying code. [2.5.3](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name)
+- [ ] There is no reliance on device motion, like shaking or tilting, to carry out an action. [2.5.4](https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation)
+
+#### 3. Undestandable: can people understand the content?
+- [ ] There’s a lang attribute on the <html> element that matches the language of the page. [3.1.1](https://www.w3.org/WAI/WCAG22/Understanding/language-of-page)
+- [ ] Nothing unexpected changes when something on the page receives keyboard focus, like a <button> [3.2.1](https://www.w3.org/WAI/WCAG22/Understanding/on-focus)
+- [ ] Nothing unexpected changes when: the value of a form field, like an option in a select, is chosen [3.2.2](https://www.w3.org/WAI/WCAG22/Understanding/on-input)
+- [ ] Some form of help is available from every page, whether contact details, a contact form, a link to a contact page, or a link to help documentation. [3.2.6](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help)
+- [ ] Error/validation messages should be communicated in text, and should provide suggestions to help the user successfully proceed. [3.3.1](https://www.w3.org/WAI/WCAG22/Understanding/error-identification)
+- [ ] As much help as is needed is offered to prevent triggering a form error; the form label may be enough, but hint text may also be required. [3.3.2](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions)
+- [ ] If the user as already given some information, it’s either: not asked for again, pre-populated in the subsequent field available to select in a dropdown [3.3.7](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry)
+
+#### 4. Robust: can people operate for any device?
+
+ - [ ] The semantic meaning of every interactive element (form controls, links, headings, landmarks, tables, and so on) is correct, and each has an accessible name. [4.1.2](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value)
+
+<hr>
+
+### 🎉 Congratulations! All of the criterias a checked for level A! 
+
+<hr>
+
+### If you need a little more....
+
+<hr>
+
+### Here is a quick guide to catch more errors 
 
 - [ ]  Ensure that viewport zoom is not disabled ([resize text](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html))
 - [ ]  Ensure a linear content flow ([focus order](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html))
@@ -389,7 +444,9 @@ Color contrast is how legible colors are when placed next to, and on top of each
 
 ## Good news 
 
-Accessibility can never be perfect, but by thinking inclusively from planning, through prototyping to coding, you can reduce the time you spend on coding to minutes. It's never been easier before. [This guide is awesome if you want to continue learning](https://www.accessibility-developer-guide.com/introduction/), or [you can ask Copilot](https://github.blog/developer-skills/github/prompting-github-copilot-chat-to-become-your-personal-ai-assistant-for-accessibility/) to be your personal a11y assistant. Also [design principles](https://inclusivedesignprinciples.info/) can be really helpful to collab in the team.
+Accessibility can never be perfect, but by thinking inclusively from planning, through prototyping to coding, you can reduce the time you spend on coding to minutes. It's never been easier before. 
+
+[This guide is awesome if you want to continue learning](https://www.accessibility-developer-guide.com/introduction/), visual checklists for all [WCAG criteria in Codepen](https://codepen.io/weboverhauls/full/zYvopYE) or [you can ask Copilot](https://github.blog/developer-skills/github/prompting-github-copilot-chat-to-become-your-personal-ai-assistant-for-accessibility/) to be your personal a11y assistant. Also [design principles](https://inclusivedesignprinciples.info/) can be really helpful to collab in the team.
 
 And remember:
 
