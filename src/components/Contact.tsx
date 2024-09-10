@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Contact: React.FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    document.title = 'Contact Page - Rhizome the Dachshund';
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
