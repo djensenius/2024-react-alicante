@@ -6,11 +6,14 @@ const Navbar: React.FC = () => {
     <nav className="bg-gray-100 p-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white text-lg font-bold">
-          <Link to="/">Pet Gallery</Link>
+          <Link to="/">Dachshund information</Link>
         </div>
         <div className="space-x-4">
           <Link to="/" className="text-gray-300 hover:text-white">
             Home
+          </Link>
+          <Link to="/gallery" className="text-gray-300 hover:text-white">
+            Gallery
           </Link>
           <Link to="/about" className="text-gray-300 hover:text-white">
             About

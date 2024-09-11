@@ -1,4 +1,8 @@
 import React from 'react';
+import chair from '../images/chair.jpg';
+import snowsitting from '../images/Dachshund_sitting_in_snow.jpg';
+import portrait from '../images/portrait.jpg';
+import party from '../images/party.jpg';
 
 const LandingPage = () => {
   return (
@@ -14,7 +18,7 @@ const LandingPage = () => {
         <div className="flex justify-center">
           <img
             className="rounded-lg shadow-lg"
-            src="https://example.com/dachshund1.jpg"
+            src={portrait}
             alt="Dachshund Overview"
           />
         </div>
@@ -23,13 +27,13 @@ const LandingPage = () => {
         <h2 className="text-3xl font-semibold mb-4">History</h2>
         <p className="text-lg mb-4">
           Dachshunds were originally bred in Germany to hunt badgers. Their name
-          literally means "badger dog" in German. They have a rich history
-          and have been popular pets for centuries.
+          literally means “badger dog” in German. They have a rich history and
+          have been popular pets for centuries.
         </p>
         <div className="flex justify-center">
           <img
             className="rounded-lg shadow-lg"
-            src="https://example.com/dachshund2.jpg"
+            src={party}
             alt="Dachshund History"
           />
         </div>
@@ -45,11 +49,20 @@ const LandingPage = () => {
         <div className="flex justify-center">
           <img
             className="rounded-lg shadow-lg"
-            src="https://example.com/dachshund3.jpg"
+            src={chair}
             alt="Dachshund Characteristics"
           />
         </div>
-        <a href="/history" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer"> More</a>.
+        <a
+          href="/history"
+          className="text-blue-500 underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {' '}
+          More
+        </a>
+        .
       </section>
 
       <section className="mb-12">
@@ -57,15 +70,24 @@ const LandingPage = () => {
         <p className="text-lg mb-4">
           Dachshunds require regular exercise and a balanced diet to maintain
           their health. They are prone to back problems due to their long spine,
-          so it's important to avoid activities that could strain their back.
+          so it’s important to avoid activities that could strain their back.
           Regular vet check-ups and a healthy lifestyle can help them live a
-          long and happy life. 
-          <a href="/care" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer"> More</a>.
+          long and happy life.
+          <a
+            href="/care"
+            className="text-blue-500 underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {' '}
+            More
+          </a>
+          .
         </p>
         <div className="flex justify-center">
           <img
             className="rounded-lg shadow-lg"
-            src="https://example.com/dachshund4.jpg"
+            src={snowsitting}
             alt="Dachshund Care"
           />
         </div>
