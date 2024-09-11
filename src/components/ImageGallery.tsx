@@ -65,7 +65,7 @@ const ImageGallery: React.FC = () => {
       </div>
       <div className="grid gap-4 grid-cols-2">
         {items.map((item, index) => (
-          <div key={index} onClick={() => openModal(item.src, item.isVideo)}>
+          <div key={index} onMouseUp={() => openModal(item.src, item.isVideo)}>
             {item.isVideo ? (
               <div className="rounded-lg md:w-56">
                 <iframe
@@ -73,7 +73,6 @@ const ImageGallery: React.FC = () => {
                   height="100%"
                   src={item.src}
                   title={item.title}
-                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
@@ -130,7 +129,6 @@ const ImageGallery: React.FC = () => {
                 height="100%"
                 src={selectedItem}
                 title="Video"
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
