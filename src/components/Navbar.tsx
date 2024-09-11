@@ -9,16 +9,28 @@ const Navbar: React.FC = () => {
           <Link to="/">Dachshund Info</Link>
         </div>
         <div className="space-x-4">
-          <Link to="/" className="text-white hover:text-gray-300 transition duration-300">
+          <Link
+            to="/"
+            className="text-white hover:text-gray-300 transition duration-300"
+          >
             Home
           </Link>
-          <Link to="/gallery" className="text-white hover:text-gray-300 transition duration-300">
+          <Link
+            to="/gallery"
+            className="text-white hover:text-gray-300 transition duration-300"
+          >
             Gallery
           </Link>
-          <Link to="/about" className="text-white hover:text-gray-300 transition duration-300">
+          <Link
+            to="/about"
+            className="text-white hover:text-gray-300 transition duration-300"
+          >
             About
           </Link>
-          <Link to="/contact" className="text-white hover:text-gray-300 transition duration-300">
+          <Link
+            to="/contact"
+            className="text-white hover:text-gray-300 transition duration-300"
+          >
             Contact
           </Link>
         </div>

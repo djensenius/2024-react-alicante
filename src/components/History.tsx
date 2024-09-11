@@ -4,7 +4,6 @@ import field from '../images/Dachshund_running_in_field.jpg';
 import log from '../images/Dachshund_crossing_log.jpg';
 import snow from '../images/Dachshund_in_the_snow.jpg';
 import minilonggold from '../images/MiniDachshundLongCoatGold.jpg';
-import tia from '../images/Tia.jpg';
 import two from '../images/two.jpg';
 
 const HistoryPage = () => {
@@ -18,13 +17,11 @@ const HistoryPage = () => {
           Dachshunds are a breed of dog known for their long bodies and short
           legs. They are playful, loyal, and make great companions.
         </p>
-        <div className="flex justify-center">
-          <img
-            className="rounded-lg shadow-lg float-left mr-4 mb-4"
-            src={field}
-            alt="Dachshund Overview"
-          />
-        </div>
+        <img
+          className="rounded-lg shadow-lg float-left mr-4 mb-4"
+          src={field}
+          alt="Dachshund Overview"
+        />
       </section>
       <section className="mb-12">
         <h2 className="text-3xl font-semibold mb-4">History</h2>
@@ -61,13 +58,11 @@ const HistoryPage = () => {
           combined with their unique appearance, have made them a beloved breed
           among dog enthusiasts.
         </p>
-        <div className="flex justify-center">
-          <img
-            className="rounded-lg shadow-lg  float-right ml-4 mb-4"
-            src={log}
-            alt="Dachshund History"
-          />
-        </div>
+        <img
+          className="rounded-lg shadow-lg  float-right ml-4 mb-4"
+          src={log}
+          alt="Dachshund History"
+        />
       </section>
 
       <section className="mb-12">
@@ -89,13 +84,17 @@ const HistoryPage = () => {
           They are good with children and can get along well with other pets if
           properly socialized.
         </p>
-        <div className="flex justify-center">
-          <img
-            className="rounded-lg shadow-lg  float-left mr-4 mb-4"
-            src={snow}
-            alt="Dachshund Characteristics"
-          />
-        </div>
+        <p className="text-lg mb-4">
+          Dachshunds are active dogs that enjoy playtime and exercise. They are
+          a versatile breed that can adapt to various living situations, from
+          apartments to houses with yards. They are also good watchdogs and will
+          alert their owners to any potential dangers.
+        </p>
+        <img
+          className="rounded-lg shadow-lg  float-left mr-4 mb-4"
+          src={snow}
+          alt="Dachshund Characteristics"
+        />
       </section>
 
       <section className="mb-12">
@@ -120,13 +119,18 @@ const HistoryPage = () => {
           condition. Regular dental care is also important to prevent dental
           issues.
         </p>
-        <div className="flex justify-center">
-          <img
-            className="rounded-lg shadow-lg float-right ml-4 mb-4"
-            src={minilonggold}
-            alt="Dachshund Care"
-          />
-        </div>
+        <p className="text-lg mb-4">
+          Dachshunds are social dogs that enjoy spending time with their owners.
+          They can be prone to separation anxiety if left alone for long
+          periods, so it’s important to provide them with plenty of attention
+          and mental stimulation. They are also good with children and can make
+          great family pets.
+        </p>
+        <img
+          className="rounded-lg shadow-lg float-right ml-4 mb-4"
+          src={minilonggold}
+          alt="Dachshund Care"
+        />
       </section>
 
       <section className="mb-12">
@@ -151,13 +155,11 @@ const HistoryPage = () => {
           mental and physical stimulation and can strengthen the bond between
           the dog and owner.
         </p>
-        <div className="flex justify-center">
-          <img
-            className="rounded-lg shadow-lg float-left mr-4 mb-4"
-            src={tia}
-            alt="Dachshund Training"
-          />
-        </div>
+        <img
+          className="rounded-lg shadow-lg float-left mr-4 mb-4"
+          src={two}
+          alt="Dachshund Health"
+        />
       </section>
 
       <section className="mb-12">
@@ -180,13 +182,6 @@ const HistoryPage = () => {
           exercise, and preventive healthcare are key to keeping a dachshund
           healthy and happy.
         </p>
-        <div className="flex justify-center">
-          <img
-            className="rounded-lg shadow-lg float-right ml-4 mb-4"
-            src={two}
-            alt="Dachshund Health"
-          />
-        </div>
       </section>
 
       <section className="mb-12">
