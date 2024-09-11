@@ -46,6 +46,9 @@ const LandingPage = () => {
             <p className="text-lg mb-4">
               Over the centuries, the breed was refined and standardized. By the 17th century, the dachshund had become a popular hunting dog among European nobility. The breed's versatility allowed it to hunt not only badgers but also foxes, rabbits, and other small game.
             </p>
+            <p className="text-lg mb-4">
+              <a href="/history" className="text-blue-500">Learn more about the history of dachshunds</a>.
+            </p>
           </div>
         </div>
       </section>
