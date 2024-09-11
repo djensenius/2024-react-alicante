@@ -84,9 +84,8 @@ const LandingPage = () => {
           </p>
           <p className="text-lg mb-4">
             <a href="/history" className="text-blue-500">
-              Learn more about the history of dachshunds
+              More
             </a>
-            .
           </p>
         </div>
       </section>
