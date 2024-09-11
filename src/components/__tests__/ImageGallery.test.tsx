@@ -12,7 +12,6 @@ test('ImageGallery should have no accessibility violations', async () => {
   expect(results).toHaveNoViolations();
 });
 
-
 test('Contact should have no accessibility violations', async () => {
   const { container } = render(<Contact />);
   const results = await axe(container);
