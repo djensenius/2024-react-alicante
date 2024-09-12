@@ -11,7 +11,8 @@
     "prettier:fix": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,md}'",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "jest"
+    "test": "jest",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "@types/react-modal": "^3.16.3",
