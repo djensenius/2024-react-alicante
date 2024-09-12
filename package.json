@@ -11,10 +11,12 @@
     "prettier:fix": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,md}'",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "jest"
+    "test": "jest",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "@types/react-modal": "^3.16.3",
+    "cypress": "^13.14.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-modal": "^3.16.1",
@@ -39,11 +41,12 @@
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^8.0.1",
     "@typescript-eslint/parser": "^8.0.1",
-    "agnostic-axe": "^3.0.3",
     "axe-core": "^4.10.0",
     "css-loader": "^7.1.2",
+    "cypress-axe": "^1.5.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-cypress": "^3.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.0",
     "eslint-plugin-storybook": "^0.8.0",

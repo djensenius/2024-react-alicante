@@ -12,7 +12,8 @@
   ],
   "plugins": [
     "prettier",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "cypress"
   ],
   "rules": {
     "prettier/prettier": "error"
