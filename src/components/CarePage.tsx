@@ -4,12 +4,12 @@ import '../index.css';
 const CarePage = () => {
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-4xl font-bold text-center mb-8">
+      <h4 className="text-4xl font-bold text-center mb-8">
         Caring for Your Dachshund
-      </h1>
+      </h4>
 
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">Diet and Nutrition</h2>
+        <h3 className="text-3xl font-semibold mb-4">Diet and Nutrition</h3>
         <p className="text-lg mb-4">
           A balanced diet is crucial for maintaining your dachshund’s health.
           Dachshunds are prone to obesity, so it’s important to monitor their
@@ -94,7 +94,7 @@ const CarePage = () => {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">Exercise</h2>
+        <h3 className="text-3xl font-semibold mb-4">Exercise</h3>
         <p className="text-lg mb-4">
           Regular exercise is essential for keeping your dachshund healthy and
           happy. Dachshunds have a lot of energy and enjoy activities such as
@@ -109,7 +109,7 @@ const CarePage = () => {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">Grooming</h2>
+        <h4 className="text-3xl font-semibold mb-4">Grooming</h4>
         <p className="text-lg mb-4">
           Grooming needs vary depending on the type of coat your dachshund has:
         </p>
@@ -128,7 +128,7 @@ const CarePage = () => {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">Health Care</h2>
+        <h4 className="text-3xl font-semibold mb-4">Health Care</h4>
         <p className="text-lg mb-4">
           Regular veterinary check-ups are essential for keeping your dachshund
           healthy. Dachshunds are prone to certain health issues, such as
@@ -143,9 +143,9 @@ const CarePage = () => {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">
+        <h4 className="text-3xl font-semibold mb-4">
           Training and Socialization
-        </h2>
+        </h4>
         <p className="text-lg mb-4">
           Training and socialization are important for dachshunds to become
           well-behaved and confident dogs. Start training early and use positive

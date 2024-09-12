@@ -9,9 +9,9 @@ import two from '../images/two.jpg';
 const HistoryPage = () => {
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-4xl font-bold text-center mb-8">
+      <h4 className="text-4xl font-bold text-center mb-8">
         Dachshund Information
-      </h1>
+      </h4>
       <section className="mb-12">
         <p className="text-lg mb-4">
           Dachshunds are a breed of dog known for their long bodies and short
@@ -20,11 +20,10 @@ const HistoryPage = () => {
         <img
           className="rounded-lg shadow-lg float-left mr-4 mb-4"
           src={field}
-          alt="Dachshund Overview"
         />
       </section>
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">History</h2>
+        <h3 className="text-3xl font-semibold mb-4">History</h3>
         <p className="text-lg mb-4">
           The dachshund originated in Germany and has a history that dates back
           to at least the 15th century. The breed was developed to hunt badgers,
@@ -61,12 +60,11 @@ const HistoryPage = () => {
         <img
           className="rounded-lg shadow-lg  float-right ml-4 mb-4"
           src={log}
-          alt="Dachshund History"
         />
       </section>
 
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">Characteristics</h2>
+        <h4 className="text-3xl font-semibold mb-4">Characteristics</h4>
         <p className="text-lg mb-4">
           Dachshunds come in three coat varieties: smooth, longhaired, and
           wirehaired. They are known for their bold and curious nature. Despite
@@ -93,12 +91,11 @@ const HistoryPage = () => {
         <img
           className="rounded-lg shadow-lg  float-left mr-4 mb-4"
           src={snow}
-          alt="Dachshund Characteristics"
         />
       </section>
 
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">Care</h2>
+        <h3 className="text-3xl font-semibold mb-4">Care</h3>
         <p className="text-lg mb-4">
           Dachshunds require regular exercise and a balanced diet to maintain
           their health. They are prone to back problems due to their long spine,
@@ -129,12 +126,11 @@ const HistoryPage = () => {
         <img
           className="rounded-lg shadow-lg float-right ml-4 mb-4"
           src={minilonggold}
-          alt="Dachshund Care"
         />
       </section>
 
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">Training</h2>
+        <h4 className="text-3xl font-semibold mb-4">Training</h4>
         <p className="text-lg mb-4">
           Training a dachshund can be a rewarding experience, but it requires
           patience and consistency. Dachshunds are intelligent and can learn
@@ -155,15 +151,11 @@ const HistoryPage = () => {
           mental and physical stimulation and can strengthen the bond between
           the dog and owner.
         </p>
-        <img
-          className="rounded-lg shadow-lg float-left mr-4 mb-4"
-          src={two}
-          alt="Dachshund Health"
-        />
+        <img className="rounded-lg shadow-lg float-left mr-4 mb-4" src={two} />
       </section>
 
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">Health</h2>
+        <h3 className="text-3xl font-semibold mb-4">Health</h3>
         <p className="text-lg mb-4">
           Dachshunds are generally healthy dogs, but they are prone to certain
           health issues. The most common health concern for dachshunds is
@@ -185,7 +177,7 @@ const HistoryPage = () => {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">Famous Dachshunds</h2>
+        <h4 className="text-3xl font-semibold mb-4">Famous Dachshunds</h4>
         <p className="text-lg mb-4">
           Dachshunds have been popular pets among many famous individuals. Some
           notable dachshund owners include artist
@@ -261,11 +253,7 @@ const HistoryPage = () => {
           increasing their popularity.
         </p>
         <div className="flex justify-center">
-          <img
-            className="rounded-lg shadow-lg"
-            src={picasso}
-            alt="Famous Dachshunds"
-          />
+          <img className="rounded-lg shadow-lg" src={picasso} />
         </div>
       </section>
     </div>

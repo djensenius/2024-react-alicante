@@ -7,14 +7,13 @@ import party from '../images/party.jpg';
 const LandingPage = () => {
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-4xl font-bold text-center mb-8">
+      <h4 className="text-4xl font-bold text-center mb-8">
         Welcome to the Dachshund Information Page
-      </h1>
+      </h4>
       <section className="mb-12">
         <img
           className="rounded-lg shadow-lg float-left mr-4 mb-4"
           src={portrait}
-          alt="Dachshund Overview"
         />
         <div className="w-full md:w-2/3">
           <p className="text-lg mb-4">
@@ -60,12 +59,12 @@ const LandingPage = () => {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">History</h2>
+        <h3 className="text-3xl font-semibold mb-4">History</h3>
         <div className="w-full md:w-1/3 mb-4 md:mb-0 md:mr-4">
           <img
             className="rounded-lg shadow-lg float-left mr-4 mb-4"
             src={snowsitting}
-            alt="Dachshund History"
+            onClick={() => window.open('/history', '_blank')}
           />
         </div>
         <div className="w-full md:w-2/3">
@@ -82,21 +81,15 @@ const LandingPage = () => {
             European nobility. The breed’s versatility allowed it to hunt not
             only badgers but also foxes, rabbits, and other small game.
           </p>
-          <p className="text-lg mb-4">
-            <a href="/history" className="text-blue-500">
-              More
-            </a>
-          </p>
         </div>
       </section>
 
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">Characteristics</h2>
+        <h3 className="text-3xl font-semibold mb-4">Characteristics</h3>
         <div className="w-full md:w-1/3 mb-4 md:mb-0 md:mr-4">
           <img
             className="rounded-lg shadow-lg float-left mr-4 mb-4"
             src={chair}
-            alt="Dachshund Characteristics"
           />
         </div>
         <div className="w-full md:w-2/3">
@@ -123,12 +116,11 @@ const LandingPage = () => {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">Care</h2>
+        <h3 className="text-3xl font-semibold mb-4">Care</h3>
         <div className="w-full md:w-1/3 mb-4 md:mb-0 md:mr-4">
           <img
             className="rounded-lg shadow-lg float-left mr-4 mb-4"
             src={party}
-            alt="Dachshund Care"
           />
         </div>
         <div className="w-full md:w-2/3">
