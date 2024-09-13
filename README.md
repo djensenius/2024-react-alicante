@@ -114,9 +114,9 @@ The reccomendations targets many, but not all level A and AA concerns and prompt
 > [!NOTE]  
 > Don't forget to ask Copilot how to fix these in your codebase!
 
-#### 1. Perceivable: can people read the content? 
-
 **Level A**
+
+#### 1. Perceivable: can people read the content? 
 - [ ] Text alternatives: images should have descriptive (alt) text. [1.1.1](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content)
 - [ ] Any audio-only content should also be conveyed in text. Any video content with no audio track should also be described in text, but could also be described with audio. ([1.2.1](https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded))
 - [ ] The audio in videos should be captioned. [1.2.2](https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded)
@@ -127,7 +127,7 @@ The reccomendations targets many, but not all level A and AA concerns and prompt
 - [ ] Color shouldn’t be the only thing used to convey meaning. [1.4.1](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color)
 - [ ] Auto playing audio that lasts more than 3 seconds can be turned down or stopped. [1.4.2](https://www.w3.org/WAI/WCAG22/Understanding/audio-control)
 
-#### 2. Perceivable: can people use the content? 
+#### 2. Operable: can people use the content? 
 - [ ] You can get around using the keyboard alone. [2.1.1](https://www.w3.org/WAI/WCAG22/Understanding/keyboard)
 - [ ] There shouldn’t be a situation where you enter a modal with the keyboard and can’t get back to where you were. ([2.1.2](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap))
 - [ ] Keyboard shortcuts should use modifier keys, like [ctrl], [command], or [alt]/[option], but you can turn them off. [2.1.4](https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts)
