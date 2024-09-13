@@ -47,8 +47,8 @@ jobs:
           browser: chrome
 
       - name: Archive production artifacts
+        if: ${{ failure() }}
         uses: actions/upload-artifact@v4
         with:
           name: screenshots
-          path: |
-            cypress/screenshots
+          path: cypress/screenshots
