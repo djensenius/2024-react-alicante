@@ -1,19 +1,31 @@
-beforeEach(() => {
-  cy.visit('http://localhost:3000');
-  cy.injectAxe();
-});
+// Define at the top of the spec file or just import it
+function terminalLog(violations) {
+  cy.task(
+    'log',
+    `${violations.length} accessibility violation${
+      violations.length === 1 ? '' : 's'
+    } ${violations.length === 1 ? 'was' : 'were'} detected`,
+  );
+  // pluck specific keys to keep the table readable
+  const violationData = violations.map(
+    ({ id, impact, description, nodes }) => ({
+      id,
+      impact,
+      description,
+      nodes: nodes.length,
+    }),
+  );
 
-it('Has no detectable a11y violations on load', () => {
-  // Test the page at initial load
-  cy.checkA11y();
-});
+  cy.task('table', violationData);
+}
 
-it('Has no detectable a11y violations on load (with custom parameters)', () => {
-  // Test the page at initial load (with context and options)
-  cy.checkA11y('.example-class', {
-    runOnly: {
-      type: 'tag',
-      values: ['wcag2a'],
-    },
+const pages = ['/', '/about', '/contact', '/history', '/care', '/gallery'];
+
+pages.forEach((page) => {
+  it(`Has no detectable a11y violations on ${page}`, () => {
+    // Test the page at initial load
+    cy.visit(`http://localhost:3000${page}`);
+    cy.injectAxe();
+    cy.checkA11y(null, null, terminalLog);
   });
 });
