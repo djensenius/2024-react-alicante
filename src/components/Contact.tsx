@@ -20,32 +20,43 @@ const Contact: React.FC = () => {
       <h2>Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <span>Name:</span>
+          <span className="p-2 m-2">Name:</span>
+          <br />
           <input
             type="text"
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            className="w-1/2 p-2 m-2 mb-5 border border-gray-300 rounded"
           />
         </div>
         <div>
-          <span>Email:</span>
+          <span className="p-2 m-2">Email:</span>
+          <br />
           <input
             type="email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className="w-1/2 p-2 m-2 mb-5 border border-gray-300 rounded"
           />
         </div>
         <div>
-          <span>Message:</span>
+          <span className="p-2 m-2">Message:</span>
+          <br />
           <textarea
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            className="w-1/2 p-2 m-2 mb-5 border border-gray-300 rounded"
           />
         </div>
-        <button type="submit">Submit</button>
+        <button
+          type="submit"
+          className="px-4 py-2 m-2 mb-5 bg-blue-500 text-white rounded"
+        >
+          Submit
+        </button>
       </form>
     </div>
   );
