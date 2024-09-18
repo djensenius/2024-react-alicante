@@ -28,10 +28,10 @@ const Navbar: React.FC = () => {
             About
           </Link>
           <Link
-            to="/contact"
+            to="/care"
             className="text-white hover:text-gray-300 transition duration-300"
           >
-            Contact
+            Care
           </Link>
         </div>
       </div>

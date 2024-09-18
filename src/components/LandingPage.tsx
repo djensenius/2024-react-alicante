@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import chair from '../images/chair.jpg';
 import snowsitting from '../images/Dachshund_sitting_in_snow.jpg';
 import portrait from '../images/portrait.jpg';
@@ -144,6 +145,18 @@ const LandingPage = () => {
             dachshunds need regular brushing to keep their coats in good
             condition. Regular dental care is also important to prevent dental
             issues.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div className="container mx-auto px-4 py-8">
+          <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
+          <p className="text-lg mb-4">
+            If you have any questions or would like more information,{' '}
+            <Link to="/contact" className="text-blue-500 underline">
+              contact us
+            </Link>
+            .
           </p>
         </div>
       </section>
