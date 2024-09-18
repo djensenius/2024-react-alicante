@@ -3,7 +3,12 @@
   "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node",
   "features": {
 		"ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/devcontainers/features/desktop-lite:1": {}
+    "ghcr.io/devcontainers/features/desktop-lite:1": {},
+    "ghcr.io/devcontainers/features/sshd:1": {
+        "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/go:1": {},
+    "ghcr.io/devcontainers/features/rust:1": {}
 	},
   "customizations": {
     "vscode": {
