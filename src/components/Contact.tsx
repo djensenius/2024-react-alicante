@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Contact: React.FC = () => {
+  const { t } = useTranslation();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    document.title = 'Contact Page - Rhizome the Dachshund';
-  }, []);
+    document.title = t('contact.title') + ' - Rhizome the Dachshund';
+  }, [t]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,10 +19,10 @@ const Contact: React.FC = () => {
 
   return (
     <div>
-      <h2>Contact Us</h2>
+      <h2>{t('contact.title')}</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <span className="p-2 m-2">Name:</span>
+          <span className="p-2 m-2">{t('contact.name')}:</span>
           <br />
           <input
             type="text"
@@ -31,7 +33,7 @@ const Contact: React.FC = () => {
           />
         </div>
         <div>
-          <span className="p-2 m-2">Email:</span>
+          <span className="p-2 m-2">{t('contact.email')}:</span>
           <br />
           <input
             type="email"
@@ -42,7 +44,7 @@ const Contact: React.FC = () => {
           />
         </div>
         <div>
-          <span className="p-2 m-2">Message:</span>
+          <span className="p-2 m-2">{t('contact.message')}:</span>
           <br />
           <textarea
             id="message"
@@ -55,7 +57,7 @@ const Contact: React.FC = () => {
           type="submit"
           className="px-4 py-2 m-2 mb-5 bg-blue-500 text-white rounded"
         >
-          Submit
+          {t('contact.submit')}
         </button>
       </form>
     </div>

@@ -1,23 +1,23 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import '../index.css';
 
 const CarePage = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="container mx-auto p-4">
       <h4 className="text-4xl font-bold text-center mb-8">
-        Caring for Your Dachshund
+        {t('carePage.title')}
       </h4>
 
       <section className="mb-12">
-        <h3 className="text-3xl font-semibold mb-4">Diet and Nutrition</h3>
+        <h3 className="text-3xl font-semibold mb-4">{t('carePage.dietAndNutrition')}</h3>
         <p className="text-lg mb-4">
-          A balanced diet is crucial for maintaining your dachshund’s health.
-          Dachshunds are prone to obesity, so it’s important to monitor their
-          food intake and ensure they get enough exercise.
+          {t('carePage.dietDescription1')}
         </p>
         <p className="text-lg mb-4">
-          Here are some popular dog food brands that are well-suited for
-          dachshunds:
+          {t('carePage.dietDescription2')}
         </p>
         <ul className="list-disc list-inside mb-4">
           <li>
@@ -62,99 +62,79 @@ const CarePage = () => {
           </li>
         </ul>
         <p className="text-lg mb-4">
-          The amount of food your dachshund needs can vary based on their age,
-          weight, and activity level. As a general guideline:
+          {t('carePage.dietDescription3')}
         </p>
         <ul className="list-disc list-inside mb-4">
-          <li>Puppies: 3-4 meals per day</li>
-          <li>Adults: 2 meals per day</li>
-          <li>Seniors: 2 smaller meals per day</li>
+          <li>{t('carePage.dietDescription4')}</li>
+          <li>{t('carePage.dietDescription5')}</li>
+          <li>{t('carePage.dietDescription6')}</li>
         </ul>
         <p className="text-lg mb-4">
-          Always consult your veterinarian to determine the best diet and
-          feeding schedule for your dachshund.
+          {t('carePage.dietDescription7')}
         </p>
         <p className="text-lg mb-4">
           <span className="italic">
-            Do not feed your dachshund the following foods:
+            {t('carePage.dietDescription8')}
           </span>
         </p>
         <ul className="list-disc list-inside mb-4">
-          <li>Chocolate</li>
-          <li>Onions</li>
-          <li>Garlic</li>
-          <li>Avocado</li>
-          <li>Alcohol</li>
-          <li>Caffeine</li>
-          <li>Grapes and raisins</li>
-          <li>Macadamia nuts</li>
-          <li>Raw yeast dough</li>
-          <li>Xylitol (a sugar substitute)</li>
+          <li>{t('carePage.dietDescription9')}</li>
+          <li>{t('carePage.dietDescription10')}</li>
+          <li>{t('carePage.dietDescription11')}</li>
+          <li>{t('carePage.dietDescription12')}</li>
+          <li>{t('carePage.dietDescription13')}</li>
+          <li>{t('carePage.dietDescription14')}</li>
+          <li>{t('carePage.dietDescription15')}</li>
+          <li>{t('carePage.dietDescription16')}</li>
+          <li>{t('carePage.dietDescription17')}</li>
+          <li>{t('carePage.dietDescription18')}</li>
         </ul>
       </section>
 
       <section className="mb-12">
-        <h3 className="text-3xl font-semibold mb-4">Exercise</h3>
+        <h3 className="text-3xl font-semibold mb-4">{t('carePage.exercise')}</h3>
         <p className="text-lg mb-4">
-          Regular exercise is essential for keeping your dachshund healthy and
-          happy. Dachshunds have a lot of energy and enjoy activities such as
-          walks, playtime, and even agility training.
+          {t('carePage.exerciseDescription1')}
         </p>
         <p className="text-lg mb-4">
-          Aim for at least 30 minutes of exercise per day. This can be broken up
-          into multiple shorter sessions if needed. Be mindful of their long
-          backs and avoid activities that could strain their spine, such as
-          jumping from heights.
+          {t('carePage.exerciseDescription2')}
         </p>
       </section>
 
       <section className="mb-12">
-        <h4 className="text-3xl font-semibold mb-4">Grooming</h4>
+        <h4 className="text-3xl font-semibold mb-4">{t('carePage.grooming')}</h4>
         <p className="text-lg mb-4">
-          Grooming needs vary depending on the type of coat your dachshund has:
+          {t('carePage.groomingDescription1')}
         </p>
         <ul className="list-disc list-inside mb-4">
-          <li>
-            Smooth-coated: Minimal grooming, regular brushing to remove loose
-            hair
-          </li>
-          <li>Longhaired: Regular brushing to prevent tangles and mats</li>
-          <li>Wirehaired: Regular brushing and occasional trimming</li>
+          <li>{t('carePage.groomingDescription2')}</li>
+          <li>{t('carePage.groomingDescription3')}</li>
+          <li>{t('carePage.groomingDescription4')}</li>
         </ul>
         <p className="text-lg mb-4">
-          Regular nail trimming, ear cleaning, and dental care are also
-          important parts of your dachshund’s grooming routine.
+          {t('carePage.groomingDescription5')}
         </p>
       </section>
 
       <section className="mb-12">
-        <h4 className="text-3xl font-semibold mb-4">Health Care</h4>
+        <h4 className="text-3xl font-semibold mb-4">{t('carePage.healthCare')}</h4>
         <p className="text-lg mb-4">
-          Regular veterinary check-ups are essential for keeping your dachshund
-          healthy. Dachshunds are prone to certain health issues, such as
-          intervertebral disc disease (IVDD), hip dysplasia, and dental
-          problems.
+          {t('carePage.healthCareDescription1')}
         </p>
         <p className="text-lg mb-4">
-          Preventive care, including vaccinations, parasite control, and dental
-          cleanings, can help keep your dachshund in good health. Be proactive
-          about addressing any health concerns with your veterinarian.
+          {t('carePage.healthCareDescription2')}
         </p>
       </section>
 
       <section className="mb-12">
         <h4 className="text-3xl font-semibold mb-4">
-          Training and Socialization
+          {t('carePage.trainingAndSocialization')}
         </h4>
         <p className="text-lg mb-4">
-          Training and socialization are important for dachshunds to become
-          well-behaved and confident dogs. Start training early and use positive
-          reinforcement methods, such as treats and praise.
+          {t('carePage.trainingAndSocializationDescription1')}
         </p>
         <p className="text-lg mb-4">
-          Socialize your dachshund by exposing them to different people, places,
-          and experiences. This can help prevent behavioral issues and make them
-          more adaptable to new situations.
+          {t('carePage.trainingAndSocializationDescription2')}
         </p>
       </section>
     </div>

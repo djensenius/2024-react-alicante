@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import { useTranslation } from 'react-i18next';
 import image1 from '../images/IMG_3137.jpg';
 import image2 from '../images/IMG_3538.jpg';
 import image3 from '../images/Eras-8.jpg';
@@ -9,6 +10,7 @@ import '../index.css';
 Modal.setAppElement('#root'); // Set the root element for accessibility
 
 const ImageGallery: React.FC = () => {
+  const { t } = useTranslation();
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
   const [isVideo, setIsVideo] = useState(false);
@@ -16,32 +18,32 @@ const ImageGallery: React.FC = () => {
   const items = [
     {
       src: 'https://www.youtube.com/embed/zk0PeLn7PjM?autoplay=1',
-      title: 'Video 1',
-      description: 'Description for Video 1',
+      title: t('imageGallery.title'),
+      description: t('imageGallery.description1'),
       isVideo: true,
     },
     {
       src: image1,
-      title: 'Image 1',
-      description: 'Description for Image 1',
+      title: t('imageGallery.title'),
+      description: t('imageGallery.description2'),
       isVideo: false,
     },
     {
       src: image2,
-      title: 'Image 2',
-      description: 'Description for Image 2',
+      title: t('imageGallery.title'),
+      description: t('imageGallery.description3'),
       isVideo: false,
     },
     {
       src: image3,
-      title: 'Image 3',
-      description: 'Description for Image 3',
+      title: t('imageGallery.title'),
+      description: t('imageGallery.description4'),
       isVideo: false,
     },
     {
       src: image4,
-      title: 'Image 4',
-      description: 'Description for Image 4',
+      title: t('imageGallery.title'),
+      description: t('imageGallery.description5'),
       isVideo: false,
     },
   ];
@@ -61,7 +63,7 @@ const ImageGallery: React.FC = () => {
   return (
     <div className="container mx-auto px-4">
       <div className="md:flex pb-5">
-        <h1 className="text-3xl font-bold underline">Image Gallery</h1>
+        <h1 className="text-3xl font-bold underline">{t('imageGallery.title')}</h1>
       </div>
       <div className="grid gap-4 grid-cols-2">
         {items.map((item, index) => (
@@ -111,7 +113,7 @@ const ImageGallery: React.FC = () => {
           onClick={closeModal}
           style={{ position: 'absolute', top: '10px', right: '10px' }}
         >
-          Close
+          {t('imageGallery.close')}
         </button>
         {selectedItem && (
           <div
