@@ -1,11 +1,14 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const About: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div>
-      <h2>About This App</h2>
+      <h2>{t('about.title')}</h2>
       <p>
-        This app is being developed for the React Alicante conference by
+        {t('about.description1')}
         <a
           href="https://github.com/alenanik"
           className="text-blue-100 hover:text-blue-700 ml-1"
@@ -25,10 +28,7 @@ const About: React.FC = () => {
         </a>
         .
       </p>
-      <p>
-        The React Alicante conference is a great opportunity to learn and
-        network with other React developers.
-      </p>
+      <p>{t('about.description2')}</p>
     </div>
   );
 };
