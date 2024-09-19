@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import picasso from '../images/picasso.webp';
 import field from '../images/Dachshund_running_in_field.jpg';
 import log from '../images/Dachshund_crossing_log.jpg';
@@ -8,10 +9,13 @@ import two from '../images/two.jpg';
 
 const HistoryPage = () => {
   return (
-    <div className="container mx-auto p-4">
-      <h4 className="text-4xl font-bold text-center mb-8">
+    <main className="container mx-auto p-4">
+      <Helmet>
+        <title>History to Dachshunds</title>
+      </Helmet>
+      <h1 className="text-4xl font-bold text-center mb-8">
         Dachshund Information
-      </h4>
+      </h1>
       <section className="mb-12">
         <p className="text-lg mb-4">
           Dachshunds are a breed of dog known for their long bodies and short
@@ -20,6 +24,7 @@ const HistoryPage = () => {
         <img
           className="rounded-lg shadow-lg float-left mr-4 mb-4"
           src={field}
+          alt="Dachshund running in a field"
         />
       </section>
       <section className="mb-12">
@@ -155,7 +160,7 @@ const HistoryPage = () => {
       </section>
 
       <section className="mb-12">
-        <h3 className="text-3xl font-semibold mb-4">Health</h3>
+        <h2 className="text-3xl font-semibold mb-4" aria-label="Dachshund Health Section">Health</h2>
         <p className="text-lg mb-4">
           Dachshunds are generally healthy dogs, but they are prone to certain
           health issues. The most common health concern for dachshunds is
@@ -256,7 +261,7 @@ const HistoryPage = () => {
           <img className="rounded-lg shadow-lg" src={picasso} />
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 

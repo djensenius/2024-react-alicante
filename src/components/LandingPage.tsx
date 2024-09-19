@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import chair from '../images/chair.jpg';
 import snowsitting from '../images/Dachshund_sitting_in_snow.jpg';
 import portrait from '../images/portrait.jpg';
@@ -8,6 +9,9 @@ import party from '../images/party.jpg';
 const LandingPage = () => {
   return (
     <div className="container mx-auto p-4">
+      <Helmet>
+        <title>Introduction to Dachshunds</title>
+      </Helmet>
       <h4 className="text-4xl font-bold text-center mb-8">
         Welcome to the Dachshund Information Page
       </h4>

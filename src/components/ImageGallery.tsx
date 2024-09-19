@@ -71,7 +71,7 @@ const ImageGallery: React.FC = () => {
                 <iframe
                   width="100%"
                   height="100%"
-                  src={item.src}
+                  src={`${item.src}?autoplay=0`}
                   title={item.title}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
